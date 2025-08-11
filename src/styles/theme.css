@@ -1,0 +1,60 @@
+@theme {
+  /* colors */
+  --color-blue-main: #4F9CF9;
+  --color-blue-dark: #043873;
+  --color-yellow-main: #ffe492;
+
+  /* border radius */
+  --radius-5xl: 2.5rem;
+  --radius-6xl: 3rem;
+  --radius-7xl: 3.5rem;
+  --radius-8xl: 4rem;
+
+  /* fonts */
+
+  --font-nunito: var(--nunito-fonts);
+  --font-oxygen: var(--oxygen-fonts);
+  --font-poppins: var(--poppin-fonts);
+
+  /* spacings */
+  --spacing-1%: 1%;
+  --spacing-2%: 2%;
+  --spacing-3%: 3%;
+  --spacing-4%: 4%;
+  --spacing-5%: 5%;
+  --spacing-6%: 6%;
+  --spacing-7%: 7%;
+  --spacing-8%: 8%;
+  --spacing-9%: 9%;
+  --spacing-10%: 10%;
+  --spacing-15%: 15%;
+  --spacing-20%: 20%;
+  --spacing-25%: 25%;
+  --spacing-30%: 30%;
+  --spacing-35%: 35%;
+  --spacing-40%: 40%;
+  --spacing-45%: 45%;
+  --spacing-50%: 50%;
+  /* --spacing-default: 10%; */
+
+  /* grid layouts */
+  --grid-fit-8: repeat(auto-fit, minmax(8em, 1fr));
+  --grid-fit-10: repeat(auto-fit, minmax(10em, 1fr));
+  --grid-fit-12: repeat(auto-fit, minmax(12em, 1fr));
+  --grid-fit-14: repeat(auto-fit, minmax(14em, 1fr));
+  --grid-fit-16: repeat(auto-fit, minmax(16em, 1fr));
+  --grid-fit-18: repeat(auto-fit, minmax(18em, 1fr));
+  --grid-fit-20: repeat(auto-fit, minmax(20em, 1fr));
+  --grid-fit-22: repeat(auto-fit, minmax(22em, 1fr));
+  --grid-fit-24: repeat(auto-fit, minmax(24em, 1fr));
+
+  --grid-fill-8: repeat(auto-fill, minmax(8em, 1fr));
+  --grid-fill-10: repeat(auto-fill, minmax(10em, 1fr));
+  --grid-fill-12: repeat(auto-fill, minmax(12em, 1fr));
+  --grid-fill-14: repeat(auto-fill, minmax(14em, 1fr));
+  --grid-fill-16: repeat(auto-fill, minmax(16em, 1fr));
+  --grid-fill-18: repeat(auto-fill, minmax(18em, 1fr));
+  --grid-fill-20: repeat(auto-fill, minmax(20em, 1fr));
+  --grid-fill-22: repeat(auto-fill, minmax(22em, 1fr));
+  --grid-fill-24: repeat(auto-fill, minmax(24em, 1fr));
+}

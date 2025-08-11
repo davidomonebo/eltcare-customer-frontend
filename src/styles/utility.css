@@ -1,0 +1,36 @@
+@utility h1 {
+  font-size: clamp(2.2rem, 3.5vw, 4.5rem);
+}
+
+@utility h2 {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+@utility h3 {
+  font-size: clamp(1.25rem, 2vw, 2.5rem);
+}
+
+@utility h4 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+@utility h5 {
+  font-size: clamp(0.875rem, 1.25vw, 1.75rem);
+}
+
+@utility h6 {
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
+}
+
+@utility title-header {
+  font-size: clamp(2rem, 2.6vw, 4rem);
+  @apply capitalize font-oxygen whitespace-nowrap;
+}
+
+@utility default-spacing {
+  @apply py-10 px-10% lg:px-5%;
+}
+
+@utility variant-small-caps {
+  font-variant: small-caps;
+}
