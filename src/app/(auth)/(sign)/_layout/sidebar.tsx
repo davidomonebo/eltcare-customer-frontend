@@ -1,5 +1,8 @@
+"use client";
+import { motion } from "framer-motion";
+
 export function Sidebar() {
   return (
-    <aside className="hidden lg:flex items-center justify-center bg-white basis-1/4 before:inset-0 before:bg-black/60"></aside>
+    <motion.aside className="hidden lg:flex relative items-center justify-center bg-white basis-1/3 before:inset-0 before:absolute before:bg-black/60"></motion.aside>
   );
 }
