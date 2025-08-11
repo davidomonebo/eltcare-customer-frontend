@@ -1,7 +1,7 @@
 "use client";
-import { logoDarkIcon } from "constants/media";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { logoDarkIcon } from "constants/media";
 
 export function Header() {
   return (
