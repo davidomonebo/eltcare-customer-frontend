@@ -7,7 +7,7 @@ export function Navbar() {
       animate={{ y: 0 }}
       exit={{ y: -100 }}
       initial={{ y: -100 }}
-      className="flex items-center justify-between default-spacing"
+      className="flex w-full items-center justify-between default-spacing shadow"
     ></motion.header>
   );
 }

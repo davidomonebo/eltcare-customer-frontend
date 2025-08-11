@@ -7,7 +7,7 @@ export function Sidebar() {
       animate={{ x: 0 }}
       exit={{ x: -100 }}
       initial={{ x: -100 }}
-      className="flex flex-col basis-80 bg-white shadow"
+      className="flex flex-col basis-60 bg-gray-200 shadow-lg"
     ></motion.aside>
   );
 }
