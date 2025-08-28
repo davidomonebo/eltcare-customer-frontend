@@ -29,7 +29,7 @@ export function Input(properties: IInputProps) {
                         {properties.label}
                     </label>
 
-                    <div className={`flex px-4 gap-2 rounded-md shadow-sm border border-slate-200 ${properties.wrapperClassName}`}>
+                    <div className={`flex px-4 gap-2 rounded-md border border-slate-600 ${properties.wrapperClassName}`}>
                         <Element
                             name={properties.name}
                             value={props.field.value}

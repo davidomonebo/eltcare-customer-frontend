@@ -4,3 +4,4 @@ export { default as logoDarkIcon } from "assets/icons/logo-dark.png";
 export { default as logoLightIcon } from "assets/icons/logo-light.png";
 
 // images
+export { default as sleepyImg } from "assets/images/sleepy.png";

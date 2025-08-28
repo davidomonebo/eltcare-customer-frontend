@@ -16,7 +16,7 @@ export function MyButton(props: ButtonProps) {
       {...props}
       onClick={props.loading || props.disabled ? undefined : props.onClick}
       whileTap={!props.loading && !props.disabled ? { scale: 0.9 } : undefined}
-      className={`bg-brand-900 whitespace-nowrap cursor-pointer text-white py-2 px-6 rounded-md flex items-center justify-center gap-2 ${props.loading || props.disabled ? "opacity-50 cursor-not-allowed" : ""
+      className={`bg-brand-900 whitespace-nowrap cursor-pointer text-white bg-blue-dark py-2 px-6 rounded-md flex items-center justify-center gap-2 ${props.loading || props.disabled ? "opacity-50 cursor-not-allowed" : ""
         } ${props.className}`}
       disabled={props.loading || props.disabled}
     >
