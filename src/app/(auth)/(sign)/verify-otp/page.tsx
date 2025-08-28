@@ -1,16 +1,11 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { Formik } from "formik";
-import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
 import { Input } from "components/primary/input";
 import { MyButton } from "components/primary/btn";
 
 export default function VerifyOTPPage() {
   const init = { otp: "" };
-
-  const router = useRouter();
   const [countdown, setCountdown] = React.useState(60); // Start with 60 seconds
 
   React.useEffect(() => {
@@ -32,37 +27,41 @@ export default function VerifyOTPPage() {
       setCountdown(60); // Reset the countdown
     }
   };
+
   async function onSubmit(values: typeof init) {
     console.log(values);
-    toast.success("Token verified successfully!", {
-      onClose: () => router.replace("/password/change"),
-    });
   }
+
   return (
-    <Formik onSubmit={onSubmit} initialValues={init}>
+    <Formik initialValues={init} onSubmit={onSubmit}>
       {(props) => (
         <form
           onSubmit={props.handleSubmit}
-          className="min-w-80 w-5/6 lg:w-2/5 2xl:w-1/3 p-5% lg:p-10 flex gap-10 flex-col rounded-xl shadow bg-white"
+          className="flex my-auto gap-20 flex-1 flex-col"
         >
-          <header className="flex gap-2 flex-col">
-            <h2 className="text-blue-dark lg:text-xl">
-              We sent a code to your mail
+          <header className="flex flex-col">
+            <h2 className="font-bold text-2xl lg:text-4xl text-blue-dark">
+              Enter confirmation code
             </h2>
-            <p className="text-sm text-gray-600">
-              Kindly enter the 6-digit code sent to your email
-            </p>
           </header>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex gap-4">
             <Input
               type="text"
               name="otp"
               placeholder="304566"
-              labelClassName="!text-sm"
-              label="Kindly enter the 6-digit code"
+              wrapperClassName="w-full"
+              labelClassName="text-center"
+              containerClassName="gap-5 w-full items-center"
+              label="Kindly enter the 6-digit code sent to your email"
             />
-            <span className="text-center text-gray-500">
+          </div>
+
+          <footer className="flex gap-4 flex-col items-center">
+            <MyButton type="submit" className="w-full lg:w-4/5">
+              Create account
+            </MyButton>
+            <span className="text-gray-500">
               Didn&#39;t receive code?{" "}
               <button
                 type="button"
@@ -73,22 +72,6 @@ export default function VerifyOTPPage() {
                 {String(countdown % 60).padStart(2, "0")}
               </button>
             </span>
-          </div>
-
-          <footer className="flex gap-4 flex-col items-center">
-            <MyButton className="w-full">Submit</MyButton>
-            <span className="text-gray-500">
-              Don&#39;t have an account?{" "}
-              <Link replace href="/sign-up" className="text-blue-main">
-                Create account
-              </Link>
-            </span>
-
-            <MyButton className="w-full lg:w-4/5 !bg-blue-main">
-              <Link replace href="/sign-in" className="">
-                Back to Login
-              </Link>
-            </MyButton>
           </footer>
         </form>
       )}
