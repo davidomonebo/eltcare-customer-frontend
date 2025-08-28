@@ -22,6 +22,25 @@ export default function ModalProvider(properties: React.PropsWithChildren) {
     client.setDefaultOptions({ queries: { enabled: !!logged } });
   }, [logged, client]);
 
+  React.useEffect(() => {
+    const handleKeyPress = (event: MouseEvent) => {
+      const portalElement = document.querySelector("#portal")!;
+      if (event.target === portalElement) setModal(undefined);
+    };
+
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && modal) setModal(undefined);
+    };
+
+    window.addEventListener("click", handleKeyPress);
+    window.addEventListener("keydown", handleEscapeKey);
+
+    return () => {
+      window.removeEventListener("click", handleKeyPress);
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [modal]);
+
   const renderModal = () => {
     if (typeof window === "undefined") return null;
     const portalElement = document.querySelector("#portal")!;

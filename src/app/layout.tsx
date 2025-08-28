@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
 import AuthProvider from "components/providers/auth.provider";
 import QueryProvider from "components/providers/query.provider";
+import ModalProvider from "components/providers/modal.provider";
 
 export const metadata: Metadata = {
   title: "Kantin Kwari",
@@ -25,9 +26,11 @@ export default function RootLayout(props: React.PropsWithChildren) {
       <body>
         <AuthProvider>
           <QueryProvider>
-            <ToastContainer />
-            <div id="portal" />
-            <div id="root">{props.children}</div>
+            <ModalProvider>
+              <ToastContainer />
+              <div id="portal" />
+              <div id="root">{props.children}</div>
+            </ModalProvider>
           </QueryProvider>
         </AuthProvider>
       </body>
